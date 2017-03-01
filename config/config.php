@@ -7,4 +7,4 @@ define("DB_NAME", 'talkingspace');
 
 define('SITE_TITLE', 'Welcome to talking space!');
 
-define('BASE_URI', 'http://'.$_SERRVER['SERVER_NAME'].'/talkingspace/');
+define('BASE_URI', 'http://'.$_SERVER['SERVER_NAME'].'/talkingspace/');
