@@ -2,7 +2,9 @@
 
 <?php
 
+$topic = new Topic;
+
 $template = new Template('templates/frontpage.php');
-$template->heading = 'This is the template heading';
+$template->topics = $topic->getAllTopics();
 
 echo $template;
