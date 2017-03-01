@@ -14,7 +14,7 @@
               <label>Password</label>
               <input name="password" type="password" class="form-control" placeholder="Enter Password">
             </div>      
-            <button name="do_login" type="submit" class="btn btn-primary">Login</button> <a  class="btn btn-default" href="register.html"> Create Account</a>
+            <button name="do_login" type="submit" class="btn btn-primary">Login</button> <a  class="btn btn-default" href="register.php"> Create Account</a>
           </form>
           </div>
           
@@ -39,6 +39,6 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="js/bootstrap.js"></script>
+    <script src="<?php echo BASE_URI; ?>templates/js/bootstrap.js"></script>
   </body>
 </html>
