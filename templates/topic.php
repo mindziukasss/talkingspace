@@ -1,4 +1,4 @@
-<?php include('includes/header.php'); ?> 
+<?php include('includes/header.php'); ?>  
 <ul id="topics">
   <li id="main-topic" class="topic topic">
     <div class="row">
@@ -42,17 +42,20 @@
     </div>
   </li>
   <?php endforeach; ?>
-</ul>
-<h3>Reply To Topic</h3>
-<form role="form">        
-    <div class="form-group">
-    <textarea id="reply" rows="10" cols="80" class="form-control" name="reply"></textarea>
-    <script>
-      CKEDITOR.replace( 'reply' );
-          </script>
-    </div>
-   <button type="submit" class="btn btn-default">Submit</button>
-</form>
-
-
-<?php include('includes/footer.php'); ?>
+          
+        </ul>
+        <h3>Reply To Topic</h3>
+        <?php if(isLoggedIn()) : ?>
+        <form role="form" method="post" action="topic.php?id=<?php echo $topic->id; ?>">        
+            <div class="form-group">
+            <textarea id="reply" rows="10" cols="80" class="form-control" name="body"></textarea>
+            <script>
+              CKEDITOR.replace( 'reply' );
+                  </script>
+            </div>
+           <button name="do_reply" type="submit" class="btn btn-default">Submit</button>
+        </form>
+        <?php else : ?>
+          <p>Please login to reply</p>
+        <?php endif; ?>
+<?php include('includes/footer.php'); ?>  
